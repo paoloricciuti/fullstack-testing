@@ -1,14 +1,15 @@
 @import '@fontsource-variable/manrope';
 @import '@fontsource-variable/jetbrains-mono';
+@import '@fontsource/mansalva';
 
 :root {
-	--r-background-color: hsl(226 19% 13%);
-	--r-main-font: 'Manrope Variable';
+	--r-background-color: theme(colors.stone.900);
+	--r-main-font: 'Mansalva';
 	--r-main-font-size: 42px;
-	--r-main-color: hsl(226 19% 98%);
-	--r-heading-font: 'Manrope';
+	--r-main-color: theme(colors.stone.100);
+	--r-heading-font: 'Mansalva';
 	--r-code-font: 'JetBrains Mono Variable';
-	--r-link-color: hsl(180 100% 50%);
+	--r-link-color: #ff3e00;
 }
 
 /* required for Reveal.js to work */

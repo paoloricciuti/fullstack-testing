@@ -40,7 +40,6 @@
 .hljs-builtin-name,
 .hljs-selector-attr,
 .hljs-selector-pseudo,
-.hljs-addition,
 .hljs-variable,
 .hljs-template-variable,
 .hljs-attribute,
@@ -50,7 +49,14 @@
 
 .hljs-comment,
 .hljs-quote,
-.hljs-deletion,
 .hljs-meta {
 	color: #a6accd;
+}
+
+.hljs-addition {
+	color: theme(colors.green.400)
+}
+
+.hljs-deletion {
+	color: theme(colors.red.400)
 }

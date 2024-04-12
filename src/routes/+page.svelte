@@ -11,6 +11,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Fullstack testing</title>
+</svelte:head>
+
 <Presentation>
 	{#each Object.values(slides) as slide}
 		<svelte:component this={slide.component ?? Slide} {...slide.props ?? {}}>
