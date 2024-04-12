@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-node": "^5.0.1",
 		"@sveltejs/kit": "^2.5.5",
 		"@sveltejs/vite-plugin-svelte": "^3.1.0",
+		"@types/qrcode-svg": "^1.1.4",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
 		"autoprefixer": "^10.4.19",
@@ -38,6 +39,7 @@
 		"@fontsource/mansalva": "^5.0.19",
 		"@types/reveal.js": "^5.0.3",
 		"prettier-plugin-tailwindcss": "^0.5.13",
+		"qrcode-svg": "^1.1.0",
 		"reveal.js": "^5.1.0",
 		"roughjs": "^4.6.6"
 	}
