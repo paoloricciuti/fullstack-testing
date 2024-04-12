@@ -77,7 +77,7 @@
 	:global(.fragment.visible.one) {
 		transform: translate(-130%, -300%);
 	}
-	:global(.fragment.two) {
+	:global(.fragment.visible.two) {
 		transform: translate(-80%, 600%);
 	}
 	:global(.fragment.visible.three) {

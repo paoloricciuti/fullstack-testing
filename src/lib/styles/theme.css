@@ -17,11 +17,11 @@
 	display: contents;
 }
 
-.reveal-viewport {
+.reveal-viewport, body {
 	background-color: var(--r-background-color);
 }
 
-.reveal {
+.reveal, body {
 	color: var(--r-main-color);
 	font-family: var(--r-main-font);
 	font-size: var(--r-main-font-size);

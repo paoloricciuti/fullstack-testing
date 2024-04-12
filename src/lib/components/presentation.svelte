@@ -2,10 +2,6 @@
 	import { onMount } from 'svelte';
 	import Reveal from 'reveal.js';
 
-	import 'reveal.js/dist/reveal.css';
-	import '@styles/theme.css';
-	import '@styles/code.css';
-
 	import { navigation } from '@stores/navigation';
 	import options from '@config';
 
