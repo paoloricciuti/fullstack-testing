@@ -7,7 +7,18 @@
 <Diff
 	title={1}
 	code={`
-+cool
--cooler
+<` +
+		`script>
+   export let name;
+-  $: trimmed = name.trim();
++  let trimmed = name.trim();
+<` +
+		`/script>
+
+{#if trimmed}
+    Your name is {name}
+{:else}
+    You need to provide a name
+{/if}
 `}
 />
