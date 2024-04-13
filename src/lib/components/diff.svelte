@@ -1,16 +1,17 @@
 <script lang="ts">
-	import Code from './code.svelte';
 	import QrCode from 'qrcode-svg';
+	import Code from './code.svelte';
 
 	export let code: string;
 	export let title: number;
-	export let code_class = '';
+	let class_name = '';
+	export { class_name as class };
 </script>
 
 <h1>Question {title}</h1>
 <div class="flex items-center">
 	<div class="basis-2/3 grid gap-4">
-		<div class={code_class}>
+		<div class={class_name}>
 			<Code lang="diff">{code}</Code>
 		</div>
 		<a

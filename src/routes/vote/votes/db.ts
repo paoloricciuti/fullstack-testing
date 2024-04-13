@@ -10,7 +10,6 @@ export type Questions = typeof votes extends Map<infer Keys, unknown> ? Keys : n
 
 export function add_vote(question: Questions, id: string, vote: 'yes' | 'no') {
 	const question_set = votes.get(question)!;
-	console.log([...question_set.no], [...question_set.yes]);
 	if (!question_set.yes.has(id) && !question_set.no.has(id)) {
 		question_set[vote].add(id);
 		const values = [question_set.yes.size, question_set.no.size];

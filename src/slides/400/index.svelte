@@ -9,7 +9,7 @@
 	code={`
 <` +
 		`script>
-   export let name;
+   const { name } = $props();
 -  $: trimmed = name.trim();
 +  let trimmed = name.trim();
 <` +

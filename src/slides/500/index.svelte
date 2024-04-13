@@ -6,20 +6,19 @@
 
 <Diff
 	title={2}
-	code_class="text-2xl"
+	class="text-2xl"
 	code={`
 <` +
 		`script>
-	import { onMount } from 'svelte';
-	let mouseX;
-	let mouseY;
+	let mouseX = $state();
+	let mouseY = $state();
 
 +	function handle_mouse_move(e){
 +		mouseX = e.clientX;
 +		mouseX = e.clientY;
 +	}
 
-	onMount(()=>{
+	$effect(()=>{
 -		window.addEventListener('mousemove', ()=>{
 -			mouseX = e.clientX;
 -			mouseX = e.clientY;

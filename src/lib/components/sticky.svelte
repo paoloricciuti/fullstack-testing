@@ -8,7 +8,6 @@
 		const svg = roughjs.svg(svg_el);
 		let back: SVGElement;
 		const resize_observer = new ResizeObserver(([entry]) => {
-			console.log(entry);
 			const [{ inlineSize: width, blockSize: height }] = entry.borderBoxSize;
 			svg_el.setAttribute('viewBox', `0 0 ${width} ${height}`);
 			const new_back = svg.rectangle(0, 0, width, height, {
