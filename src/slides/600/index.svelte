@@ -10,7 +10,8 @@
 	code={`
 <` +
 		`script>
-	const { user_id, page } = $props();
+-	const { page } = $props();
++	const { user_id, page } = $props();
 
 	$effect(()=>{
 +		const controller = new AbortController();
