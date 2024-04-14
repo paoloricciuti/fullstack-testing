@@ -5,13 +5,14 @@
 </script>
 
 <Diff
+	lang="svelte"
 	title={1}
 	code={`
 <` +
 		`script>
    const { name } = $props();
--  $: trimmed = name.trim();
-+  let trimmed = name.trim();
+  $: trimmed = name.trim(); // [!code --]
+  let trimmed = name.trim(); // [!code ++]
 <` +
 		`/script>
 

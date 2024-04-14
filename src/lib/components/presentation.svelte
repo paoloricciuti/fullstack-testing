@@ -22,7 +22,7 @@
 
 			// we pass the language to the `<Code>` block
 			// and higlight code blocks after initialization
-			highlightCodeBlocks(deck);
+			//highlightCodeBlocks(deck);
 		});
 
 		// reload page after update to avoid HMR issues

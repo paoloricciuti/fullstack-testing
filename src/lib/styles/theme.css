@@ -28,6 +28,7 @@
 	font-weight: normal;
 }
 
+.reveal .pre-like,
 .reveal pre {
 	display: block;
 	position: relative;
@@ -37,6 +38,7 @@
 	line-height: 1.6em;
 	text-align: left;
 	word-wrap: break-word;
+	white-space: pre;
 }
 
 .reveal code {

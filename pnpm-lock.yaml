@@ -31,6 +31,9 @@ dependencies:
     version: 4.6.6
 
 devDependencies:
+  '@shikijs/transformers':
+    specifier: ^1.3.0
+    version: 1.3.0
   '@sveltejs/adapter-node':
     specifier: ^5.0.1
     version: 5.0.1(@sveltejs/kit@2.5.5)
@@ -70,6 +73,12 @@ devDependencies:
   prettier-plugin-svelte:
     specifier: ^3.2.2
     version: 3.2.2(prettier@3.2.5)(svelte@4.2.13)
+  shiki:
+    specifier: ^1.3.0
+    version: 1.3.0
+  shiki-magic-move:
+    specifier: ^0.3.6
+    version: 0.3.6(shiki@1.3.0)
   svelte:
     specifier: ^4.2.13
     version: 4.2.13
@@ -637,6 +646,16 @@ packages:
     dev: true
     optional: true
 
+  /@shikijs/core@1.3.0:
+    resolution: {integrity: sha512-7fedsBfuILDTBmrYZNFI8B6ATTxhQAasUHllHmjvSZPnoq4bULWoTpHwmuQvZ8Aq03/tAa2IGo6RXqWtHdWaCA==}
+    dev: true
+
+  /@shikijs/transformers@1.3.0:
+    resolution: {integrity: sha512-3mlpg2I9CjhjE96dEWQOGeCWoPcyTov3s4aAsHmgvnTHa8MBknEnCQy8/xivJPSpD+olqOqIEoHnLfbNJK29AA==}
+    dependencies:
+      shiki: 1.3.0
+    dev: true
+
   /@sveltejs/adapter-node@5.0.1(@sveltejs/kit@2.5.5):
     resolution: {integrity: sha512-eYdmxdUWMW+dad1JfMsWBPY2vjXz9eE+52A2AQnXPScPJlIxIVk5mmbaEEzrZivLfO2wEcLTZ5vdC03W69x+iA==}
     peerDependencies:
@@ -1156,6 +1175,10 @@ packages:
 
   /didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
+    dev: true
+
+  /diff-match-patch-es@0.1.0:
+    resolution: {integrity: sha512-y+HzthUzXXodKmawgRo9gQivKhY/NGzkZURFMQWSWsdRpOpkjjmX9DfDWB/T4a3blVqKoXL6f8Spq1+dLd+csQ==}
     dev: true
 
   /dir-glob@3.0.1:
@@ -1903,6 +1926,10 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /ohash@1.1.3:
+    resolution: {integrity: sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==}
+    dev: true
+
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -2338,6 +2365,31 @@ packages:
   /shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: true
+
+  /shiki-magic-move@0.3.6(shiki@1.3.0):
+    resolution: {integrity: sha512-s0nwJ4a3hleeCG/qPOqGtJUYP36RU2kUiwrZhsfdMfTCV/URAxqittWb7/rWsJr+sONOUwt5pSks+8ZQ8rkA1Q==}
+    peerDependencies:
+      react: ^18.2.0
+      shiki: ^1.1.6
+      vue: ^3.4.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      shiki:
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      diff-match-patch-es: 0.1.0
+      ohash: 1.1.3
+      shiki: 1.3.0
+    dev: true
+
+  /shiki@1.3.0:
+    resolution: {integrity: sha512-9aNdQy/etMXctnPzsje1h1XIGm9YfRcSksKOGqZWXA/qP9G18/8fpz5Bjpma8bOgz3tqIpjERAd6/lLjFyzoww==}
+    dependencies:
+      '@shikijs/core': 1.3.0
     dev: true
 
   /signal-exit@4.1.0:

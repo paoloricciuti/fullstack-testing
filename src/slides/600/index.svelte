@@ -5,27 +5,28 @@
 </script>
 
 <Diff
+	lang="svelte"
 	title={2}
 	class="text-2xl"
 	code={`
 <` +
 		`script>
--	const { page } = $props();
-+	const { user_id, page } = $props();
+	const { page } = $props(); // [!code --]
+	const { user_id, page } = $props(); // [!code ++]
 
 	$effect(()=>{
-+		const controller = new AbortController();
-+		(async () => {
-+			const res = await fetch(\`/profile/\${user_id}\`, { 
-+				signal: controller.signal
-+			});
-+			const profile = await res.json();
--			navigator.sendBeacon('/analytics', { page });
-+			navigator.sendBeacon('/analytics', { page, profile });
-+		})();
-+		return ()=>{
-+			controller.abort();
-+		}
+		const controller = new AbortController(); // [!code ++]
+		(async () => { // [!code ++]
+			const res = await fetch(\`/profile/\${user_id}\`, {  // [!code ++]
+				signal: controller.signal // [!code ++]
+			}); // [!code ++]
+			const profile = await res.json(); // [!code ++]
+			navigator.sendBeacon('/analytics', { page }); // [!code --]
+			navigator.sendBeacon('/analytics', { page, profile }); // [!code ++]
+		})(); // [!code ++]
+		return ()=>{ // [!code ++]
+			controller.abort(); // [!code ++]
+		} // [!code ++]
 	});
 <` +
 		`/script>

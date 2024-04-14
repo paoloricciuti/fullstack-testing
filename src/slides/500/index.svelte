@@ -5,6 +5,7 @@
 </script>
 
 <Diff
+	lang="svelte"
 	title={2}
 	class="text-2xl"
 	code={`
@@ -13,20 +14,20 @@
 	let mouseX = $state();
 	let mouseY = $state();
 
-+	function handle_mouse_move(e){
-+		mouseX = e.clientX;
-+		mouseX = e.clientY;
-+	}
+	function handle_mouse_move(e){ // [!code ++]
+		mouseX = e.clientX; // [!code ++]
+		mouseX = e.clientY; // [!code ++]
+	} // [!code ++]
 
 	$effect(()=>{
--		window.addEventListener('mousemove', ()=>{
--			mouseX = e.clientX;
--			mouseX = e.clientY;
--		});
-+		window.addEventListener('mousemove', handle_mouse_move);
-+		return ()=>{
-+			window.removeEventListener('mousemove', handle_mouse_move);
-+		}
+		window.addEventListener('mousemove', ()=>{ // [!code --]
+			mouseX = e.clientX; // [!code --]
+			mouseX = e.clientY; // [!code --]
+		}); // [!code --]
+		window.addEventListener('mousemove', handle_mouse_move); // [!code ++]
+		return ()=>{ // [!code ++]
+			window.removeEventListener('mousemove', handle_mouse_move); // [!code ++]
+		} // [!code ++]
 	});
 <` +
 		`/script>
