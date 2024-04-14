@@ -11,27 +11,22 @@
 	code={`
 <` +
 		`script>
-	let mouseX = $state();
-	let mouseY = $state();
-
-	function handle_mouse_move(e){ // [!code ++]
-		mouseX = e.clientX; // [!code ++]
-		mouseX = e.clientY; // [!code ++]
-	} // [!code ++]
-
-	$effect(()=>{
-		window.addEventListener('mousemove', ()=>{ // [!code --]
-			mouseX = e.clientX; // [!code --]
-			mouseX = e.clientY; // [!code --]
-		}); // [!code --]
-		window.addEventListener('mousemove', handle_mouse_move); // [!code ++]
-		return ()=>{ // [!code ++]
-			window.removeEventListener('mousemove', handle_mouse_move); // [!code ++]
-		} // [!code ++]
-	});
+	import { slide } from 'svelte/transition';
+	let users = $state([...]);
+	let open = $state(false);
 <` +
 		`/script>
 
-{mouseX} x {mouseY}
+<button onclick={()=>{ open = !open; }}>User list</button>
+{#if open}
+	<ul>
+	{#each users as user}
+		<li transition:slide> // [!code --]
+		<li transition:slide|global> // [!code ++]
+			<a href="/profile/{user.id}">{user.name} {user.last_name}</a>
+		</li>
+	{/each}
+	</ul>
+{/if}
 `}
 />

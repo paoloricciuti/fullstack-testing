@@ -6,7 +6,7 @@
 
 <Diff
 	lang="svelte"
-	title={2}
+	title={3}
 	class="text-2xl"
 	code={`
 <` +

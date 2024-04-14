@@ -3,7 +3,8 @@ export const controllers = new Map<string, ReadableStreamDefaultController<strin
 export const votes = new Map([
 	['1' as const, { yes: new Set<string>(), no: new Set<string>() }],
 	['2' as const, { yes: new Set<string>(), no: new Set<string>() }],
-	['3' as const, { yes: new Set<string>(), no: new Set<string>() }]
+	['3' as const, { yes: new Set<string>(), no: new Set<string>() }],
+	['4' as const, { yes: new Set<string>(), no: new Set<string>() }]
 ]);
 
 export type Questions = typeof votes extends Map<infer Keys, unknown> ? Keys : never;

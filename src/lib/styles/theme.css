@@ -39,6 +39,7 @@
 	text-align: left;
 	word-wrap: break-word;
 	white-space: pre;
+	max-width: 100%;
 }
 
 .reveal code {
