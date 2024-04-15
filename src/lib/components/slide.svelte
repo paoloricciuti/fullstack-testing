@@ -18,6 +18,7 @@
 	export let background: StringOrNull = null;
 	export let gradient: StringOrNull = null;
 	export let image: StringOrNull = null;
+	export let background_size: StringOrNull = null;
 	export let video: StringOrNull = null;
 	export let iframe: StringOrNull = null;
 	export let interactive: Bool = null;
@@ -41,6 +42,7 @@
 	data-background-color={background}
 	data-background-gradient={gradient}
 	data-background-image={image}
+	data-background-size={background_size}
 	data-background-video={video}
 	data-background-iframe={iframe}
 	data-background-interactive={interactive}

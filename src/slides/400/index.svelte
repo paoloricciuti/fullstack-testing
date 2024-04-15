@@ -11,7 +11,7 @@
 <` +
 		`script>
    const { name } = $props();
-  $: trimmed = name.trim(); // [!code --]
+  const trimmed = $derived(name.trim()); // [!code --]
   let trimmed = name.trim(); // [!code ++]
 <` +
 		`/script>
