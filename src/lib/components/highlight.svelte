@@ -6,8 +6,8 @@
 	export let code: string;
 	export let lang: BundledLanguage | SpecialLanguage;
 	export let theme: BundledTheme = 'github-dark-default';
-
-	delete $$restProps.class;
+	let class_name = '';
+	export { class_name as class };
 
 	function indent(string: string) {
 		const tabs = string
@@ -40,7 +40,7 @@
 	});
 </script>
 
-<div>
+<div class={class_name}>
 	{@html to_render}
 </div>
 

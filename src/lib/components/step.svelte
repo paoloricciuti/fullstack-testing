@@ -1,27 +1,27 @@
 <script lang="ts">
-	export let type = 'p'
-	export let order: string | null = null
-	export let fadeIn = false
-	export let fadeOut = false
-	export let fadeUp = false
-	export let fadeDown = false
-	export let fadeLeft = false
-	export let fadeRight = false
-	export let fadeInThenOut = false
-	export let currentVisible = false
-	export let fadeInThenSemiOut = false
-	export let semiFadeOut = false
-	export let highlightRed = false
-	export let highlightGreen = false
-	export let highlightBlue = false
-	export let highlightCurrentRed = false
-	export let highlightCurrentGreen = false
-	export let highlightCurrentBlue = false
-	export let grow = false
-	export let shrink = false
-	export let strike = false
+	export let type = 'p';
+	export let order: string | null = null;
+	export let fadeIn = false;
+	export let fadeOut = false;
+	export let fadeUp = false;
+	export let fadeDown = false;
+	export let fadeLeft = false;
+	export let fadeRight = false;
+	export let fadeInThenOut = false;
+	export let currentVisible = false;
+	export let fadeInThenSemiOut = false;
+	export let semiFadeOut = false;
+	export let highlightRed = false;
+	export let highlightGreen = false;
+	export let highlightBlue = false;
+	export let highlightCurrentRed = false;
+	export let highlightCurrentGreen = false;
+	export let highlightCurrentBlue = false;
+	export let grow = false;
+	export let shrink = false;
+	export let strike = false;
 
-	delete $$restProps.class
+	delete $$restProps.class;
 </script>
 
 <svelte:element

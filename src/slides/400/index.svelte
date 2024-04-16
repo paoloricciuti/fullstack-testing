@@ -10,9 +10,9 @@
 	code={`
 <` +
 		`script>
-   const { name } = $props();
-  const trimmed = $derived(name.trim()); // [!code --]
-  let trimmed = name.trim(); // [!code ++]
+	const { name } = $props();
+	const trimmed = $derived(name.trim()); // [!code --]
+	let trimmed = name.trim(); // [!code ++]
 <` +
 		`/script>
 

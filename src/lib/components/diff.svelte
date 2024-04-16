@@ -14,13 +14,7 @@
 <div class="grid grid-cols-3">
 	<div class="col-span-2 grid bg-stone-950 border border-stone-600 grid-rows-[1fr_auto]">
 		<div class="{class_name} border-b border-stone-600 max-w-full overflow-auto">
-			<Highlight
-				{code}
-				{lang}
-				options={{
-					containerStyle: false
-				}}
-			/>
+			<Highlight {code} {lang} />
 		</div>
 		<a
 			class="text-center text-lg justify-self-center font-mono p-4"
