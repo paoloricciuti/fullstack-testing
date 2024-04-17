@@ -1,4 +1,7 @@
 import type Slide from '@lib/components/slide.svelte';
 import type { ComponentProps, SvelteComponent } from 'svelte';
 
-export type Props<T extends SvelteComponent = Slide> = ComponentProps<T>;
+export type Props<T extends SvelteComponent = Slide> = ComponentProps<T> & {
+	on_in?: () => void;
+	on_out?: () => void;
+};

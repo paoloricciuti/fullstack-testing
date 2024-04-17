@@ -24,7 +24,12 @@
 
 <Presentation>
 	{#each slides as [_, slide]}
-		<svelte:component this={slide.component ?? Slide} {...slide.props ?? {}}>
+		<svelte:component
+			this={slide.component ?? Slide}
+			on:in={slide.props?.on_in}
+			on:out={slide.props?.on_out}
+			{...slide.props ?? {}}
+		>
 			<svelte:component this={slide.default} />
 		</svelte:component>
 	{/each}

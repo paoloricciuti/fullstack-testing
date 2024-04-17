@@ -1,8 +1,8 @@
 <script lang="ts" context="module">
 	import type { Props } from '@slides/types';
-	import fire from './fire.jpg';
+	import caveman from './caveman.jpg';
 	export const props: Props = {
-		image: fire,
+		image: caveman,
 		animate: true
 	};
 </script>
