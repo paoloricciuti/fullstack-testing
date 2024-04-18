@@ -13,15 +13,14 @@
 	<Highlight
 		lang="typescript"
 		code={`
-import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite'; // [!code --]
-import { defineConfig } from 'vitest/config'; // [!code ++]
+import { my_fn } from './my_fn';
+import { it, describe, expect } from 'vitest';
 
-export default defineConfig({
-	plugins: [sveltekit()],
-	test: { // [!code ++]
-		include: ['src/**/*.{test,spec}.{js,ts}'], // [!code ++]
-	} // [!code ++]
+describe('my function', ()=>{
+	it('works as expected', ()=>{
+		const result = my_fn();
+		expect(result).toBeDefined();
+	});
 });
 `}
 	/>

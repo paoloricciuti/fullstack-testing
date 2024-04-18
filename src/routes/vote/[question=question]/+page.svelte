@@ -67,15 +67,20 @@
 			}
 		};
 	}
+	const yes_and_no = ['yes', 'no'] as const;
 </script>
 
 <div class="p-4">
+	<h1 class="text-center">Question {data.question}</h1>
 	<svg class="transform -rotate-1" use:rough={live_data} viewBox="0 0 100 100"></svg>
 	<form class="voter" method="post" use:enhance>
-		{#each ['yes', 'no'] as vote}
-			<button name="vote" value={vote}>{vote}</button>
+		{#each yes_and_no as vote}
+			<button class:text-[#ff3e00]={data.user_vote[vote]} name="vote" value={vote}>{vote}</button>
 		{/each}
 	</form>
+	{#if data.question !== '6'}
+		<a class="text-center" href="/vote/{+data.question + 1}">Next</a>
+	{/if}
 </div>
 
 <style>
@@ -84,7 +89,8 @@
 		justify-content: space-evenly;
 	}
 	svg,
-	form {
+	form,
+	a {
 		max-width: min(40rem, 90%);
 		margin: auto;
 		display: block;

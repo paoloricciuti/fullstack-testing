@@ -3,15 +3,19 @@ import { votes, add_vote } from '../votes/db';
 import { error } from '@sveltejs/kit';
 
 export function load({ cookies, params: { question } }) {
-	if (!cookies.get(COOKIE_NAME)) {
+	const id = cookies.get(COOKIE_NAME);
+	if (!id) {
 		cookies.set(COOKIE_NAME, crypto.randomUUID(), {
 			path: '/vote'
 		});
 	}
 	const question_set = votes.get(question)!;
 	const values = [question_set.yes.size, question_set.no.size];
+	const user_vote = { yes: !id || question_set.yes.has(id), no: !id || question_set.no.has(id) };
 	return {
-		votes: values
+		votes: values,
+		question,
+		user_vote
 	};
 }
 

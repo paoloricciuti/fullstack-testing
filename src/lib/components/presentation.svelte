@@ -63,7 +63,7 @@
 
 <svelte:window on:hashchange={updateHash} />
 
-<div class="reveal">
+<div style:--height="{options.height}px" style:--width="{options.width}px" class="reveal">
 	<div class="slides">
 		<slot />
 	</div>
