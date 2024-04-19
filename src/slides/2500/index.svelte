@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
 	import Highlight from '@lib/components/highlight.svelte';
 	import Notes from '@lib/components/notes.svelte';
 	import Sticky from '@lib/components/sticky.svelte';

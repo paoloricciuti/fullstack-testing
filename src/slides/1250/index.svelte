@@ -3,10 +3,13 @@
 	import type { Props } from '@slides/types';
 	import art from './art.jpg';
 	import Sticky from '@lib/components/sticky.svelte';
+	import Notes from '@lib/components/notes.svelte';
 	export const props: Props = {
 		image: art
 	};
 </script>
+
+<Notes>Remember to just spell SPA</Notes>
 
 <Step order="2">
 	<Sticky as="div" class="font-mono flex text-slate-950 p-8 text-9xl justify-evenly gap-8">

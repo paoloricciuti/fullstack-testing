@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="ts" context="module">
 	import Highlight from '@lib/components/highlight.svelte';
 	import Sticky from '@lib/components/sticky.svelte';
 	import type { Props } from '@slides/types';

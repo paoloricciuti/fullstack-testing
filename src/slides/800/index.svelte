@@ -11,7 +11,7 @@
 	code={`
 <` +
 		`script>
-	let value = $state(0);
+	let value = $state(10);
 </` +
 		`script>
 
