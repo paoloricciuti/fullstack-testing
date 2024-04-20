@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Presentation, Slide } from '@components';
+	import Presenter from '@lib/components/presenter.svelte';
 	import type { Props } from '@slides/types';
 	import type { ComponentType, SvelteComponent } from 'svelte';
 	const slides = Object.entries(
@@ -21,6 +22,8 @@
 <svelte:head>
 	<title>Fullstack testing</title>
 </svelte:head>
+
+<Presenter />
 
 <Presentation>
 	{#each slides as [_, slide]}
